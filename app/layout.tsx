@@ -3,6 +3,7 @@ import { Quicksand } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
+import ToastProvider from '@/providers/toast-provider'
 
 const font = Quicksand({ subsets: ['latin'], weight: '500', })
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+        <ToastProvider />
         <Navbar />
         {children}
         <Footer />
