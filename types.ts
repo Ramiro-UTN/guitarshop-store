@@ -2,6 +2,8 @@
 export interface Instrumento {
   id: string;
   name: string;
+  tipos: Tipo[];
+  formatos: Formato[];
   cartelera: Cartelera;
 };
 

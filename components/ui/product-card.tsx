@@ -41,8 +41,10 @@ const ProductCard: React.FC<ProductCard> = ({
         <p className="text-sm text-gray-500">
           {data.instrumento?.name}
         </p>
+        
 
       </div>
+      
       <div className="text-sm text-gray-500">
         <Price value={data.price} />
       </div>
