@@ -2,6 +2,9 @@ import Container from "@/components/ui/container";
 import getProducto from "@/actions/get-producto";
 import Info from "@/components/info";
 import Gallery from "@/components/gallery";
+import getProductos from "@/actions/get-productos";
+import ProductList from "@/components/product-list";
+import { getSuggested } from "@/actions/get-suggested";
 
 interface ProductoPageProps {
   params: {
@@ -15,6 +18,8 @@ const ProductoPage: React.FC<ProductoPageProps> = async ({
   params
 }) => {
   const producto = await getProducto(params.productoId);
+  const suggested = await getSuggested(producto);
+
   console.log("PROD_FROM_ID", producto);
   return (
 
@@ -29,6 +34,7 @@ const ProductoPage: React.FC<ProductoPageProps> = async ({
           </div>
           <hr className="my-10" />
 
+          {suggested.length > 0 && <ProductList title="Te pueden interesar" items={suggested} />}
         </div>
       </Container>
     </div>
