@@ -21,6 +21,13 @@ export interface Producto {
   tipo: Tipo;
   formato: Formato;
   images: Image[];
+  fondo: string;
+  tapa: string;
+  aros: string;
+  puente: string;
+  diapason: string;
+  mastil: string;
+  audioUrl: string;
 }
 
 export interface Image {
