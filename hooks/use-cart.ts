@@ -14,9 +14,9 @@ interface CartStore {
 const useCart = create(
   persist<CartStore>((set, get) => ({
     items: [],
-    addItem: (data: Product) => {
+    addItem: (data: Producto) => {
       const currentItems = get().items;
-      const existingItem = currentItems.find(item => currentItems.id === data.id)
+      const existingItem = currentItems.find(item => item.id === data.id)
       if (existingItem) {
         return toast("Este producto ya está dentro del carrito.");
       }
