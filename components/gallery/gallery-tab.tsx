@@ -15,7 +15,7 @@ const GalleryTab: React.FC<GalleryTabProps> = ({
     <Tab className="relative aspect-square ">
       {({selected}) => (
         <div>
-          <span className="h-full w-full">
+          <span className="absolute inset-0 h-full w-full">
             <Image
               fill
               src={image.url}

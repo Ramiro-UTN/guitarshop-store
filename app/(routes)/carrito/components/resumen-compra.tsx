@@ -41,6 +41,7 @@ type DatosCompradorFormValues = z.infer<typeof formSchema>
 const ResumenCompra = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, isLoading] = useState(false);
+  
 
   const searchParams = useSearchParams();
   const items = useCart((state) => state.items);
@@ -218,7 +219,7 @@ const ResumenCompra = () => {
                 />
               </div>
               <div className="flex justify-end items-center w-full">
-                <Button type="submit" className="mt-4">Checkout</Button>
+                <Button disabled={loading} type="submit" className="mt-4">Checkout</Button>
               </div>
             </form>
 

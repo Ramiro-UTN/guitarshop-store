@@ -8,7 +8,7 @@ import ToastProvider from '@/providers/toast-provider'
 const font = Quicksand({ subsets: ['latin'], weight: '500', })
 
 export const metadata: Metadata = {
-  title: 'Guitarras Lonatti E-commerce',
+  title: 'Guitarras Lonatti',
   description: 'Guitars store',
 }
 
