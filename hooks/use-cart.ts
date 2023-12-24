@@ -29,7 +29,7 @@ const useCart = create(
     },
     removeAll: () => set({ items: [] }),
   }), {
-    name: "cart-storage",
+    name: "guitarshop-cart-storage",
     storage: createJSONStorage(() => localStorage)
   })
 );

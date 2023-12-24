@@ -3,11 +3,12 @@ import Link from "next/link";
 import MainNav from "./main-nav";
 import getInstrumentos from "@/actions/get-instrumentos";
 import CartButton from "./cart-button";
+import { useRouter } from "next/navigation";
 
 
 const Navbar = async () => {
   const instrumentos = await getInstrumentos();
-  
+
 
   return (
     <div className="border-b">
@@ -17,7 +18,7 @@ const Navbar = async () => {
             <p className="font-bold text-xl">Guitarras Lonatti</p>
           </Link>
           <MainNav data={instrumentos} />
-          <CartButton/>
+          <CartButton />
         </div>
       </Container>
     </div>
