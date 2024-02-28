@@ -5,7 +5,7 @@ import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
 
 export default async function Home() {
-  const cartelera = await getCartelera("6e5d2e72-7eba-4ef9-8ef8-c151277463e6");
+  const cartelera = await getCartelera("bc204aa3-e58e-413c-9b5b-169ac69508a3");
   const productos = await getProductos({ exhibir: true });
 
   console.log("PRODUCTOS: ", productos);
